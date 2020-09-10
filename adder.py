@@ -1,5 +1,3 @@
-import sys
-
 def xor(a, b):
     return (a or b) and (not (a and b))
 def binToBool(val):
@@ -47,4 +45,10 @@ def main(a, b):
     n = max(len(str(a)), len(str(b))) + 1
     val = nBit(a, b, n)
     print((len(str(val)) - len(str(a))) * ' ' + f'   {a}\n+  ' + (len(str(val)) - len(str(b))) * ' ' +  f'{b}\n=  {val}') 
-main(int(sys.argv[1]), int(sys.argv[2]))
+
+## Example Usage:
+# main(110101, 10110)
+## Expected Output:
+#     110101
+# +    10110
+# =  1001011
