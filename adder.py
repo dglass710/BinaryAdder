@@ -1,12 +1,7 @@
-import sys
-
 def xor(a, b):
     return (a or b) and (not (a and b))
 def bit(a, b, c):
-    a = bool(a); b = bool(b); c = bool(c)
-    suum = int(xor(a, xor(b, c)))
-    carry = int(xor(a, b) and c or (a and b))
-    return suum, carry
+    return int(xor(bool(a), xor(bool(b), bool(c)))), int(xor(bool(a), bool(b)) and bool(c) or (bool(a) and bool(b)))
 def cushionZeros(strg, val):
     while len(strg) < val:
         strg = '0' + strg
@@ -70,6 +65,8 @@ def exp(a, b):
 def mainExp(a, b):
     val = exp(a, b)
     print(f'{a}^{b} =  {val}') 
-mainExp(111, 100)
-mainExp(int(sys.argv[1]), int(sys.argv[2]))
-# main(int(sys.argv[1]), int(sys.argv[2]))
+    
+# Sample input:
+# main(101, 11)  ## adds 101 + 11 with and, or, and not operations and prints the result
+# mainMult(111, 10)  ## multiplies 111 * 10 through repetetive addition and prints the result
+# mainExp(111, 100)  ## produces the result of 111^100 through repetetive multiplication and prints the result
