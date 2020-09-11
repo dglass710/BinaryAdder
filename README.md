@@ -4,7 +4,7 @@ It is bootstrapped from only the and, or, and not gates typically available in a
 I define an xor gate becuase it is not otherwise available without imports. 
 Next I define a bit with three inputs and two outputs. The inputs include two digits of equal significance and a carry in from the next most significant digit. 
 The input is three binary digits and it returns two binary digits.   
-The Truth tables are as follows: 
+The Truth tables are as follows:   
 0,0,0 -> 0,0   
 1,0,0/0,1,0/0,0,1 -> 1,0   
 1,1,0/1,0,1/0,1,1 -> 0,1   
