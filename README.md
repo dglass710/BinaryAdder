@@ -3,12 +3,12 @@ A module whose function's can calculate the sums, products, and powers of any tw
 It is bootstrapped from only the and, or, and not gates typically available in assemblers, and here in python. 
 I define an xor gate becuase it is not otherwise available without imports. 
 Next I define a bit with three inputs and two outputs. The inputs include two digits of equal significance and a carry in from the next most significant digit. 
-The input is three binary digits and it returns two binary digits.
+The input is three binary digits and it returns two binary digits.   
 The Truth tables are as follows: 
 0,0,0 -> 0,0   
 1,0,0/0,1,0/0,0,1 -> 1,0   
 1,1,0/1,0,1/0,1,1 -> 0,1   
-1,1,1 -> 1,1 
+1,1,1 -> 1,1   
 nBits uses n bits to add two binary numbers. It stores the carry of each bit for use in the next and checks its value for an overflow. 
 The main function should be used to ovoid an overflow and print things nicely. 
 mult multiplies two binary numbers by using nBits. It allocates enough bits to ovoid an overflow by considering the worse case (11...111 * 11...111 where both numbers are equal). 
